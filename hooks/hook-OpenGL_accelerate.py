@@ -1,0 +1,1 @@
+hiddenimports = ['numpy','numpy_formathandler', 'arraydatatype', 'errorchecker', 'formathandler', 'latebind', 'vbo', 'wrapper']
