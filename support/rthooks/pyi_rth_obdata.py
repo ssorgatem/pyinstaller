@@ -16,12 +16,13 @@
 # 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 import os
-import sys
+
+d = os.environ['_MEIPASS2']
 
 #Data files and plugins should be copied to sys._MEIPASS. OpenBabel plugins and data 
 #files are located in diferent places, depending on the platform.
 #Copying all of them to the same directory is the easiest approach
 
-os.environ["BABEL_DATADIR"] = sys._MEIPASS
-os.environ["BABEL_LIBDIR"] = sys._MEIPASS #Not nedded in Windows
-os.environ["PATH"] = sys._MEIPASS + ";" + os.environ["PATH"] #Needed for Windows
+os.environ["BABEL_DATADIR"] = os.path.join(d)
+os.environ["BABEL_LIBDIR"] = d #Not nedded in Windows
+os.environ["PATH"] = d + ";" + os.environ["PATH"] #Needed for Windows
