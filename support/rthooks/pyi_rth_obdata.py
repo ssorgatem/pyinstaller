@@ -19,10 +19,10 @@ import sys
 
 d = sys._MEIPASS
 
-#Data files and plugins should be copied to sys._MEIPASS. OpenBabel plugins and data 
+#Data files and plugins should be copied to sys._MEIPASS. OpenBabel plugins and data
 #files are located in diferent places, depending on the platform.
 #Copying all of them to the same directory is the easiest approach
 
-os.environ["BABEL_DATADIR"] = os.path.join(d)
+os.environ["BABEL_DATADIR"] = os.path.join(d, 'data')
 os.environ["BABEL_LIBDIR"] = d #Not nedded in Windows
 os.environ["PATH"] = d + ";" + os.environ["PATH"] #Needed for Windows
