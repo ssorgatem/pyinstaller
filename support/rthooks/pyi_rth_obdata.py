@@ -15,9 +15,9 @@
 # Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
 # 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
-import os
+import sys
 
-d = os.environ['_MEIPASS2']
+d = sys._MEIPASS
 
 #Data files and plugins should be copied to sys._MEIPASS. OpenBabel plugins and data 
 #files are located in diferent places, depending on the platform.
