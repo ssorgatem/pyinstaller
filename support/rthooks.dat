@@ -10,4 +10,5 @@
     'Image':      ['support/rthooks/pyi_rth_Image.py'],
     'PIL.Image':  ['support/rthooks/pyi_rth_PIL_Image.py'],
     'openbabel':  ['support/rthooks/pyi_rth_obdata.py'],
+    'PySide':      ['support/rthooks/pyi_rth_pyside_qt4plugins.py'],
 }
