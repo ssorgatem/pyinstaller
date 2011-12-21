@@ -68,14 +68,16 @@ if MEIPASS2 in os.environ:
     meipass2_value = os.path.abspath(meipass2_value)
     sys._MEIPASS = meipass2_value
 
-    # Delete _MEIPASS2 from environment.
-    # On some platforms (e.g. AIX) 'os.unsetenv()' is not available and then
-    # deleting the var from os.environ does not delete it from the environment.
-    # In those cases we cannot delete the variable but only set it to the
-    # empty string.
-    os.environ[MEIPASS2] = ''
-    del os.environ[MEIPASS2]
-
+#Following section is commented out because it breaks PyQt4 and PySide
+##########################################
+#    # Delete _MEIPASS2 from environment.
+#    # On some platforms (e.g. AIX) 'os.unsetenv()' is not available and then
+#    # deleting the var from os.environ does not delete it from the environment.
+#    # In those cases we cannot delete the variable but only set it to the
+#    # empty string.
+#    os.environ[MEIPASS2] = ''
+#    del os.environ[MEIPASS2]
+##########################################
 
 # Ensure PYTHONPATH contains absolute paths. Otherwise import of other python
 # modules will fail when current working directory is changed by frozen
