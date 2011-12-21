@@ -5,6 +5,20 @@
 import os
 import sys
 
+###################################################################################
+#This is in order to make pyinstaller work when using PyQt4 with api v2
+#Unfortunately it makes it stop working for applications using api v1
+#In the near future (python3) only api2 will be supported, so applications using api v1
+#should port their applications to api v2 anyway, which is, in addition, a lot 
+#more pythonic
+import sip
+sip.setapi('QString', 2)
+sip.setapi('QVariant', 2)
+#Maybe there's a way to determine if an application is making to sip.setapi 
+#and wrap this piece of code into an if statement
+####################################################################################
+
+
 d = "qt4_plugins"
 d = os.path.join(sys._MEIPASS, d)
 
